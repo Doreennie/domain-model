@@ -89,7 +89,6 @@ public struct Money {
     let newMoney = newCurr.amount - from.amount
     return Money(amount: Int(newMoney), currency: newCurr.currency)
   }
-    
 }
 
 //////////////////////////////////
@@ -140,7 +139,7 @@ open class Person {
     open var job : Job? {
         get { return _job }
         set(value) {
-            if age > 15 {
+            if age >= 16{
                 _job = value
             }
         }
@@ -150,7 +149,7 @@ open class Person {
     open var spouse : Person? {
         get { return _spouse}
         set(value) {
-            if age > 17 {
+            if age >= 18{
                 _spouse = value
             }
         }
@@ -163,8 +162,7 @@ open class Person {
   }
 
   open func toString() -> String {
-    let sentence = "Full Name: \(firstName) \(lastName) Age: \(age) Job: \(job) Spouse: \(spouse)"
-    return sentence
+    return "[Person: \(firstName) lastName:\(firstName) age: \(age) job: \(job) spouse: \(spouse)]"
   }
 }
 
@@ -197,14 +195,12 @@ open class Family {
     var totIncome = 0;
     for person in members {
         if person.job != nil {
-            totIncome += person.job!.calculateIncome(52 * 40)
+            totIncome += person.job!.calculateIncome(2000)
         }
     }
     return totIncome
   }
 }
-
-
 
 
 
