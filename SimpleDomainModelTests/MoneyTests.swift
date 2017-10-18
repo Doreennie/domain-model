@@ -28,7 +28,7 @@ class MoneyTests: XCTestCase {
     let tenGBP = Money(amount: 10, currency: "GBP")
     XCTAssert(tenGBP.amount == 10)
     XCTAssert(tenGBP.currency == "GBP")
-   
+    
   }
     
   func testUSDtoGBP() {

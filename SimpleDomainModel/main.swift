@@ -162,7 +162,7 @@ open class Person {
   }
 
   open func toString() -> String {
-    return "[Person: \(firstName) lastName:\(firstName) age: \(age) job: \(job) spouse: \(spouse)]"
+    return "[Person: firstName:\(firstName) lastName:\(lastName) age:\(age) job:\(job) spouse:\(spouse)]"
   }
 }
 
