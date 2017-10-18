@@ -46,7 +46,7 @@ public struct Money {
         currentAmount *= 1.25
         currentCurrency = "CAN"
     case("EUR", "USD"):
-        currentAmount *= 1.18
+        currentAmount /= 1.5
         currentCurrency = "USD"
     case("EUR", "CAN"):
         currentAmount += 1.48
@@ -56,7 +56,7 @@ public struct Money {
         currentCurrency = "GBP"
     case("CAN", "USD"):
         currentAmount *= 0.8
-        currentCurrency = "CAN"
+        currentCurrency = "USD"
     case("CAN", "GBP"):
         currentAmount *= 0.6
         currentCurrency = "GBP"
@@ -64,8 +64,8 @@ public struct Money {
         currentAmount *= 0.68
         currentCurrency = "EUR"
     case("GBP", "USD"):
-        currentAmount *= 1.33
-        currentCurrency = "CAN"
+        currentAmount *= 2
+        currentCurrency = "USD"
     case("GBP", "CAN"):
         currentAmount *= 1.66
         currentCurrency = "CAN"
